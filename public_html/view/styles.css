@@ -1,0 +1,185 @@
+body {
+    width: 100%;
+    height: 100%;
+    font-family: "Lucida Grande", "DejaVu Sans", "Bitstream Vera Sans", Verdana, Arial, sans-serif;
+    background: url(img/bg-body.gif) repeat top center;
+    font-size: 14px;
+	margin: 0;
+	padding: 0;
+}
+
+a {
+    outline: none;
+}
+
+img {
+    border: 0;
+}
+
+p a {
+    color: #34441f;
+}
+
+#footer {
+    background: url(img/bg-footer-tall.jpg) repeat-x center top;
+    height: 330px;
+}
+
+#footer div div {
+    height: 320px;
+}
+
+#footer div div#pasta {
+
+    background: url(img/bg-pasta.jpg) no-repeat;
+}
+
+#footer div div#pizza {
+    background: url(img/bg-pizza.jpg) no-repeat;
+}
+
+#footer div div#callus {
+    background: url(img/bg-contact.jpg) no-repeat;
+}
+
+#footer div div div {
+    background: none;
+    height: 200px;
+    padding: 0;
+    width: 249px;
+    margin: 0 auto;
+}
+
+#footer div div#pasta div {
+    margin: 0 0 0 16px;
+}
+
+#footer div div#pizza div {
+    margin: 0 0 0 25px;
+}
+
+#footer div div#callus div {
+    margin: 0 0 0 30px;
+}
+
+#footer div div div span {
+    background: url(img/bg-heading.jpg) no-repeat;
+    color: #2f9a18;
+    display: block;
+    font-size: 24px;
+    font-weight: bold;
+    height: 31px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+#footer div div div p, #footer div div div p span {
+    color: #9c9c9b;
+    font-size: 12px;
+}
+
+#footer div div div p span {
+    background: none;
+    font-weight: normal;
+    height: auto;
+    line-height: 15px;
+    margin: 0;
+    text-align: left;
+}
+
+#footer div div div a.more {
+    color: #9c9c9b;
+    display: block;
+}
+
+#footer div div div strong {
+    font-size: 18px;
+}
+
+#footer div div div b {
+    color: #EE4959;
+    font-weight: normal;
+    display: block;
+    font-size: 36px;
+    text-align: center;
+}
+
+#footer div.section {
+    background: url(img/bg-footnote.gif) repeat top center;
+    padding: 33px 0 0;
+    overflow: hidden;
+    width: 100%;
+}
+
+#footer div.section div {
+    background: none;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 0 0 50px;
+}
+
+#footer div.section div p {
+    color: #809b58;
+    float: left;
+    font-size: 10px;
+    margin: 15px 0 0;
+}
+
+#footer div.section div div {
+    color: #809d5d;
+    float: right;
+    font-size: 16px;
+    padding: 10px 0 0;
+    text-shadow: 1px 1px 0 #182c09;
+}
+
+#footer div.section div div span {
+    float: left;
+    line-height: 15px;
+}
+
+#footer div.section div div div {
+    margin: -7px 0 0 25px;
+    padding: 0;
+    width: auto;
+}
+
+#footer div.section div div div a {
+    display: inline-block;
+    height: 40px;
+    padding: 0 5px;
+    width: 48px;
+}
+
+#footer div.section div div div a.facebook {
+    background: url(img/icon.gif) no-repeat center 3px;
+}
+
+#footer div.section div div div a.linked-in {
+    background: url(img/icon.gif) no-repeat center -50px;
+}
+
+#footer div.section div div div a.twitter {
+    background: url(img/icon.gif) no-repeat center -100px;
+}
+
+.error {
+    padding: 5px;
+    color: red;
+}
+
+#stype-cell, #crtype-cell {
+    text-align: center;
+}
+
+#stype-cell input, #crtype-cell input{
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    display: inline;
+    width: 10%;
+}
+
+#success{
+    color: green;
+}

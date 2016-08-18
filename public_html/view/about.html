@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Pizza Portal | About</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="styles.css"/>
+    <script type="text/javascript">
+    </script>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 col-xs-12 col-sm-12">
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div>
+                        <img src="img/logo.jpg" alt="Logo" class="img-thumbnail img-responsive pull-left"
+                             style="margin-right:15px;" height="50" width="71"/>
+                        <ul class="nav navbar-nav">
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/order">Order</a></li>
+                            <li><a href="/checkout">Cart <span id="cartEntities">(0)</span></a></li>
+                            <li class="active"><a href="/about">About</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8 col-sm-8 col-xs-8">
+            <div>
+                <div>
+                    <div>
+                        <h1><a href="index.html">Liberteri Italiano is located in:</a></h1>
+
+                        <p>#145 Old building,</p>
+                        <p>abc Street</p>
+                        <p>city 8888</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-4 col-xs-4">
+            <span><a href="/"><img src="img/map.jpg" alt="Image" class="img-thumbnail img-responsive"></a></span>
+        </div>
+    </div>
+    <div class="row" id="footer">
+        <div class="col-md-4">
+            <div id="pasta">
+                <div>
+                    <span>Pasta</span>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer cursus, metus et vulputate
+                        bibendum, nisi velit luctus purus, a mattis metus dui eu risus.</p>
+                    <a href="/" class="more">More</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div id="pizza">
+                <div>
+                    <span>Pizza</span>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer cursus, metus et vulputate
+                        bibendum, nisi velit luctus purus, a mattis metus dui eu risus.</p>
+                    <a href="/" class="more">More</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div id="callus">
+                <div>
+                    <span>Call us now!</span>
+                    <b>123-475-5967</b>
+
+                    <p><strong>Contact us at:</strong><br><i>thechef@liberteri.com</i></p>
+
+                    <p><strong>Snailmail:</strong><span>#145 Old building,<br>abc Street<br>city 8888</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="scripts.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        getNumberOfOrderedPizzas();
+    });
+</script>
+</body>
+</html>

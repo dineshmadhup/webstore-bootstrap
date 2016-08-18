@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Pizza Portal | Checkout</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.3/themes/smoothness/jquery-ui.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="styles.css"/>
+    <script type="text/javascript"></script>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 col-xs-12 col-sm-12">
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div>
+                        <img src="img/logo.jpg" alt="Logo" class="img-thumbnail img-responsive pull-left"
+                             style="margin-right:15px;" height="50" width="71"/>
+                        <ul class="nav navbar-nav">
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/order">Order</a></li>
+                            <li class="active"><a href="/checkout">Cart <span id="cartEntities">(0)</span></a></li>
+                            <li><a href="/about">About</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-sm-6 col-xs-6 col-md-offset-3 col-sm-offset-3 col-xs-offset-3">
+            <div>
+                <h1>Order</h1>
+
+                <div id="full_order">
+
+                </div>
+
+                <h1>Checkout Form</h1>
+
+                <form name="order_form" method="get" action="" role="form" class="form-horizontal">
+                    <div class="form-group">
+                        <label class="control-label col-md-3" for="first_name">First Name</label>
+
+                        <div class="col-md-9">
+                            <input type="text" name="first_name" value="" id="first_name" class="form-control"/>
+                            <span style="color:red"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-3" for="last_name">Last Name</label>
+
+                        <div class="col-md-9">
+                            <input type="text" name="last_name" value="" id="last_name" class="form-control"/>
+                            <span style="color:red"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-3" for="address">Address</label>
+
+                 
+                        <div class="col-md-9">
+                            <input type="text" name="address" value="" id="address" class="form-control"/>
+                            <span style="color:red"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-3" for="phone">Phone number</label>
+
+                        <div class="col-md-9">
+                            <input type="text" name="phone" value="" placeholder="XXX-XXX-XXXXX" id="phone"
+                                   class="form-control"/>
+                            <span style="color:red"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-3">Sale type</label>
+                        <div class="col-md-9">
+                            <label class="radio-inline">
+                                <input type="radio" name="stype" value="cash" onclick="saleTypeClick(this)"/>Cash
+                                
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="stype" value="credit" onclick="saleTypeClick(this)"/>Credit
+                                
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group" id="cr_t" style="display: none">
+                        <label class="control-label col-md-3">Credit Card Type</label>
+                        <div class="col-md-9">
+                            <label class="radio-inline">
+                                <input type="radio" name="crtype" value="ax" onclick="crCardTypeClick(this)"/>AX
+                                <span style="color:red"></span>
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="crtype" value="v" onclick="crCardTypeClick(this)"/>V
+                                <span style="color:red"></span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group" id="cr_number" style="display: none">
+                        <label class="control-label col-md-3" for="txt_cr_number">Credit Card Number</label>
+
+                        <div class="col-md-9">
+                            <input type="text" name="cr_number" value="" id="txt_cr_number"
+                                   class="form-control"/>
+                            <span style="color:red"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group" id="cr_ex_date" style="display: none">
+                        <label class="control-label col-md-3" for="datepicker">Credit Card Expiration Date</label>
+
+                        <div class="col-md-9">
+                            <input type="text" name="cr_ex_date" value="" id="datepicker"
+                                   class="form-control"/>
+                            <span style="color:red"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-3" for="total_amount">Sales Amount</label>
+
+                        <div class="col-md-9">
+                            <input type="text" name="total_amount" value="" id="total_amount"
+                                   class="form-control" disabled="disabled"/>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <button type="submit" id="btn_checkout" class="btn btn-default">Checkout</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="row" id="footer">
+        <div class="col-md-4">
+            <div id="pasta">
+                <div>
+                    <span>Pasta</span>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer cursus, metus et vulputate
+                        bibendum, nisi velit luctus purus, a mattis metus dui eu risus.</p>
+                    <a href="/" class="more">More</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div id="pizza">
+                <div>
+                    <span>Pizza</span>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer cursus, metus et vulputate
+                        bibendum, nisi velit luctus purus, a mattis metus dui eu risus.</p>
+                    <a href="/" class="more">More</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div id="callus">
+                <div>
+                    <span>Call us now!</span>
+                    <b>134-475-5986</b>
+
+                    <p><strong>Contact us at:</strong><br><i>thechef@liberteri.com</i></p>
+
+                    <p><strong>Snailmail:</strong><span>#47671 Mission Blvd,<br>abc Street<br>Fremont 94539</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="//code.jquery.com/ui/1.11.3/jquery-ui.js"></script>
+<script type="text/javascript" src="scripts.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        getMyOrders();
+        getNumberOfOrderedPizzas();
+        $("#datepicker").datepicker();
+        $("#btn_checkout").click(btnCheckoutHandler);
+    });
+</script>
+</body>
+</html>
